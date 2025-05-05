@@ -2,9 +2,9 @@
 Program Name: homework.js
 Author: Indra Aguilar
 Date Created: 02/09/2025
-Date Last Edited: 04/29/2025
-Version: 3.0
-Description: This file contains JavaScript support for the file "patient-form_hw2.html".
+Date Last Edited: 05/04/2025
+Version: 4.0
+Description: This file contains JavaScript support for the file "patient-form_hw4.html".
 */
 
 // Much of this code was taken in referrence from MISSO's resources from the TP Committee. 
@@ -17,7 +17,7 @@ let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
 
 
-// This part displays the value of the slider in "patient-form.html"
+// This part displays the value of the slider in "patient-form_hw4.html"
     // Taken from MISSO's Resources from the TP Committee
 let slider = document.getElementById("healthrange");
 let output = document.getElementById("range-slider")
@@ -25,7 +25,7 @@ output.innerHTML = slider.value;
 slider.oninput = function () {output.innerHTML = this.value;};
 
 
-// This part validates the first name data input in "patient-form_hw3.html".
+// This part validates the first name data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee
 function validateFname()
     {
@@ -63,7 +63,7 @@ function validateFname()
     }
 
 
-// This part validates the middle initial data input in "patient-form_hw3.html".
+// This part validates the middle initial data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee
 function validateMinitial()
     {
@@ -87,7 +87,7 @@ function validateMinitial()
     }
 
 
-// This part validates the last name data input in "patient-form_hw3.html".
+// This part validates the last name data input in "patient-form_hw4.html".
 function validateLname()
 {
         let lname = document.getElementById("lname").value;
@@ -124,7 +124,7 @@ function validateLname()
     }
 
 
-// This part validates the date of birth data input in "patient-form_hw3.html".
+// This part validates the date of birth data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function validateDob() 
     {
@@ -153,7 +153,7 @@ function validateDob()
     }
 
 
-// This part validates the Social Security data input in "patient-form_hw3.html".
+// This part validates the Social Security data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function validateSsnumber()
     {
@@ -173,7 +173,7 @@ function validateSsnumber()
     }
 
 
-// This part validates the address data input in "patient-form_hw3.html".
+// This part validates the address data input in "patient-form_hw4.html".
 function validateAddress1()
     {
         if (address1 == " ")
@@ -190,7 +190,7 @@ function validateAddress1()
     }
 
 
-// This part validates the city data input in "patient-form_hw3.html".
+// This part validates the city data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committe
 function validateCity()
 {
@@ -209,7 +209,7 @@ function validateCity()
 }
 
 
-// This part validates the ZIP Code data input in "patient-form_hw3.html".
+// This part validates the ZIP Code data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function validateZipcode() 
     {
@@ -238,7 +238,7 @@ function validateZipcode()
     }
 
 
-// This part validates the email data input in "patient-form_hw3.html".
+// This part validates the email data input in "patient-form_hw4.html".
 function validateEmail()
     {
         const email = document.getElementById("email").value;
@@ -257,7 +257,7 @@ function validateEmail()
     }
 
 
-// This part validates the phone number data input in "patient-form_hw3.html".
+// This part validates the phone number data input in "patient-form_hw4.html".
 function validatePhonenumber()
     {
         const phonenumber = document.getElementById("phonenumber").value;
@@ -276,7 +276,7 @@ function validatePhonenumber()
     }
 
 
-// This part validates the username data input in "patient-form_hw3.html".
+// This part validates the username data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function validateUid()
     {
@@ -320,7 +320,7 @@ function validateUid()
 
 
 
-// This part validates the password data input in "patient-form_hw3.html".
+// This part validates the password data input in "patient-form_hw4.html".
 function validatePword()
     {
         const pword = document.getElementById("pword").value;
@@ -358,7 +358,7 @@ function validatePword()
     }
 
 
-// This part confirms the password data input in "patient-form_hw3.html".
+// This part confirms the password data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function confirmPword() 
     {
@@ -378,7 +378,7 @@ function confirmPword()
     }
 
 
-// This part provides an overall review of the data input in "patient-form_hw3.html".
+// This part provides an overall review of the data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function reviewInput() 
     {
@@ -413,14 +413,14 @@ function reviewInput()
     }
 
 
-// This part removes the overall review of the data input in "patient-form_hw3.html".
+// This part removes the overall review of the data input in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee 
 function removeReview() 
     {
         document.getElementById("showInput").innerHTML = "";
     }
 
-// This part grants functionality to the alert box in "patient-form_hw3.html".
+// This part grants functionality to the alert box in "patient-form_hw4.html".
     // Taken from MISSO's Resources from the TP Committee
 function showAlert()
     {
