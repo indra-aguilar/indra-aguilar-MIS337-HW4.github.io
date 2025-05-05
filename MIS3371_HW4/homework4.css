@@ -243,16 +243,57 @@ td.output
 
 
 /* This part styles the output table used during the review process */
-/* table.output, tr.output, td.output
+table.output, tr.output, td.output
     {
-
-
+     width: 500px;
+        background-color: rosybrown;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: rgb(124, 18, 18);
     }
 
 
 /* This part styles the individual table cells used on the output table */
-/* td.outputdata
+td.outputdata
     {
-
-
+    width: 500px;
+        background-color: rosybrown;
+        padding: 10px;
+        border-spacing: 2px;
     }
+
+/* This part styles the iFrame */
+.iframe-cont
+    {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        width: 25px;
+        height: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+.iframe-cont iframe
+    {
+        width: 95%;
+        height: 25%;
+        border: 1px solid black;
+    }
+
+/* This part styles the welcome message the user sees when entering the login. */
+#welcomemsg1
+    {
+        margin-top: 20px;
+        font-size: 22px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+#welcomemsg2
+    {
+        margin-top: 20px;
+        font-size: 22px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
