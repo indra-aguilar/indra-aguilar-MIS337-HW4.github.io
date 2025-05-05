@@ -9,6 +9,96 @@ Description: This file contains JavaScript support for the file "patient-form_hw
 
 // Much of this code was taken in referrence from MISSO's resources from the TP Committee. 
 
+// This part saves and retrieves cookies from user input in fields. 
+    // Taken from MISSO's Resources from the TP Committee 
+function setCookie(name, cvalue,expiryDays)
+    {
+        var day = newDate();
+        day.setTime(day.getTime + (expiryDays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + day.toUTCString();
+        document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+    }
+function getCookie(name)
+    {
+        var cookieName = name + "=";
+        var cookies = document.cookie.split(';');
+
+        for (var i = 0; i < cookies.length; i++)
+            {
+                var cookie = cookies[i].trim();
+                if (cookie.indexOf(cookieName) == 0)
+                    {
+                       return cookie.substring(cookieName.length, cookie.length); 
+                    }
+            }
+        return "";
+    }
+
+// This part prefills the code using the cookies saved, if applicable. 
+    // Taken from MISSO's Resources from the TP Committee
+inputs.forEach(function (input) {
+    
+        var inputElement = document.getElementById(input.id);
+        var cookieValue = getCookie(input.cookieName);
+
+        if (cookieValue !== "")
+            {
+                inputElement.value = cookieValue;
+            }
+
+        inputElement.addEventListener("input", function()
+            {
+                setCookie(input.cookieName, inputElement.value, 30);
+            });
+    });
+
+// This part displays a welcome message using cookies.
+    // Taken from MISSO's Resources from the TP Committee
+var firstName = getCookie("firstName");
+if (firstName !== "")
+    {
+        document.getElementById("welcomemsg1").innerHTML = "Welcome back, " + firstName + ".<br>";
+        document.getElementById("welcomemsg2").innerHTML = "<a href = '#' id='new-user'> Not " + firstName + "? Click Here. </a>" ; 
+
+        document.getElementById("new-user").addEventListener("click", function () {
+            inputs.forEach(function (input) { 
+                setCookies(input.cookieName, "", -1);
+            });
+            location.reload();
+        });
+    }
+
+// This part integrates the checkbox for the "Remember Me" function in "patient-form_hw4.html"
+    // Taken from MISSO's Resources from the TP Committee
+document.getElementById("remember-me").addEventListener("change", function () {
+    const rememberMe = this.checked;
+
+    if (!rememberMe) 
+        {
+            deleteAllCookies();
+            console.log("All cookies were deleted because 'Remember Me' was unchecked.");
+        }
+        else 
+            {
+                inputs.forEach(function (input) {
+                    const inputElement = document.getElementById(input.id);
+                    if (inputElement.value.trim() !== "")
+                        {
+                            setCookie(input.cookieName, inputElement.value, 30);
+                        }
+            });
+            console.log("Cookies were saved because 'Remember Me' was checked.");
+        }
+    });
+document.addEventListener("DOMContentLoaded", function ()
+    {
+        const rememberMe = this.documentElementByID("remember-me").checked;
+        
+        if (!rememberMe)
+            {
+              deleteAllCookies();      
+            }
+    });
 
 // This part displays the current date in "patient-form_hw2.html"
     // Taken from MISSO's Resources from the TP Committee 
