@@ -27,7 +27,12 @@ h1, h2
         font-weight: bold;
         flex-grow: 1;
     }
-
+.sticky
+    {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
 /* This part styles "Today's Date" in the "patient-form.html" file. */
 #today
