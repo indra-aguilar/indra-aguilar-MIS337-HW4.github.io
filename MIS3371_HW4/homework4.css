@@ -17,6 +17,7 @@ header
         width: 100%;
         background-color: #000a56;
         color:aliceblue;
+        position: sticky;
     }
 h1, h2
     {
