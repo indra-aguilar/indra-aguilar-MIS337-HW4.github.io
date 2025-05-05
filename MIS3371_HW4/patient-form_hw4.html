@@ -44,6 +44,17 @@ which are in a seperate repository due to the timing of assignments.
         </header>
         <hr>
 
+<!-- These are the welcome messages the user sees when loading the page. -->
+<center>
+    <span id="welcomemsg1"> </span>
+    <span id="welcomemsg2"> </span>
+</center>
+
+<!-- This part inserts the iFrame. -->
+<div class="iframe-cont">
+    <iframe class="frame" src="https://www.cloverleafclinic.com/" frameborder="_"> </iframe>
+</div>
+
 <!-- This is the ending page for the form. -->
         <form action="MIS3371_HW4/thankyou-formpage_hw4.html">
             <center>
@@ -259,6 +270,16 @@ which are in a seperate repository due to the timing of assignments.
                             <td> <input type="password" name="pword2" id="pword2" minlength="10" required onblur="confirmPword()" 
                                     oninput="confirmPword()" onfocus="confirmPword"/> 
                                  <span class="error" id="pword2-error"> </span> </td>
+                        </tr>
+
+<!-- This part allows a user to check "Remember Me" in the login creation portal. -->
+                        <tr>
+                            <td class="td1"
+                                <label for="remember-me"> Remember Me:</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="remember-me" name="remember-me" checked />
+                            </td>
                         </tr>
 
 <!-- This part allows users to submit, reset, review, or validate the data in the form. -->
